@@ -1,3 +1,4 @@
 ## Project Name
 * Justnews
-## 
+## Author(s) Information
+* Hawa Evakali
