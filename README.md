@@ -5,3 +5,5 @@
 * ailabeyqute@gmail.com
 ## Requirements
 * This program requires python3.+ installed.
+
+## Setup/Installation
