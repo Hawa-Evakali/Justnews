@@ -17,3 +17,9 @@ The repository, if downloaded as a .zip file will need to be extracted to your p
 * ## Step 3:
  Open the terminal, go to the project directory and run the following commands: chmod +x manage.py and ./start.sh respectively to launch the program.
  ## Technologies Used
+* Git
+* Flask
+* HTML5 & CSS
+* Bootstrap
+* Python 3.9
+* Heroku
