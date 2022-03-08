@@ -29,3 +29,4 @@ The repository, if downloaded as a .zip file will need to be extracted to your p
 * No known bugs Be sure to report more bugs by contacting me.
 
 ## Licence And Copyright Information
+* Copyright 2022 Hawa Evakali
