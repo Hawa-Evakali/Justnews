@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro %}
+  {% block content %}
+        <meta  name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
+        {% if title %}
+        <title> {{ title }}</title>
+        {% else %}
+        <title> news</title>
+        {% endif %}
+         
+
+<div class="container">
+<h1>Health</h1>
+              {{macro.displaySourcesList(health)}}
+</div>
+{% endblock %}

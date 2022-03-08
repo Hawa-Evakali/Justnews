@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro %}
+  {% block content %}
+        <meta  name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
+        {% if title %}
+        <title> {{ title }}</title>
+        {% else %}
+        <title> news</title>
+        {% endif %}
+         <!-- <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}"></link> -->
+
+<div class="container">
+  {{macro.displaySourcesList(sports)}}
+</div>
+{% endblock %}

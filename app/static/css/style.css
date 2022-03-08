@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway";
+}
+
+.radio-btn {
+  display: none;
+}
+
+html,
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 720px;
+}
+
+.container {
+  /*background-color: green;*/
+  width: 98%;
+  height: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .navbar-container {
+  position: absolute;
+  left: 0;
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  transition: background 0.2s ease-in;
+}
+
+.navbar {
+  width: 100%;
+  height: 50%;
+  /*background-color: navy;*/
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  font-size: clamp(0.9rem, 2.2vw, 1.2rem);
+  color: white;
+}
+
+.navbar label {
+  background-color: black;
+  width: 7vw;
+  height: 7vw;
+  max-width: 60px;
+  max-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#radio1:checked ~ * .navbar label {
+  background-color: rgb(55, 45, 110);
+}
+
+.navbar label:hover {
+  background-color: white;
+  color: black;
+}
+
+.container .slides-container {
+  height: 100%;
+  width: 90%;
+  position: absolute;
+  right: 0;
+  /*background-color: teal;*/
+}
+
+.slides-container .slides {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /*background-color: saddlebrown;*/
+}
+
+.slides .slide-1,
+.slides .slide-2,
+.slides .slide-3,
+.slides .slide-4,
+.slides .slide-5 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform-origin: right;
+}
+
+.slides .slide-1 {
+  background: rgb(65, 52, 129);
+  z-index: 0;
+  transition: 0.4s;
+}
+
+.slides .slide-2 {
+  background: rgb(255, 88, 66);
+  transform: translateX(100%);
+  z-index: 1;
+}
+
+.slides .slide-3 {
+  background: rgb(255, 207, 10);
+  transform: translateX(100%);
+  z-index: 1;
+  transition: transform 0.5s ease-in;
+}
+
+.slides .slide-4 {
+  background: rgb(255, 19, 136);
+  transform: translateX(100%);
+  z-index: 1;
+  transition: transform 0.5s ease-in;
+}
+
+.slides .slide-5 {
+  background: rgb(91, 45, 143);
+  transform: translateX(100%);
+  z-index: 1;
+  transition: transform 0.5s ease-in;
+}
+
+.slides .text {
+  width: 20%;
+}
+
+.slides .text h1 {
+  margin-bottom: 30px;
+  font-size: clamp(2rem, 2.5vw, 4rem);
+  color: white;
+  font-weight: 500;
+}
+
+.slides .text i {
+  font-size: clamp(4rem, 2.5vw, 6rem);
+}
+
+.slides .text p {
+  font-size: clamp(0.6rem, 2.2vw, 0.8rem);
+  color: white;
+  font-weight: 500;
+}
+
+.slides .text span {
+  color: rgb(255, 207, 10);
+}
+
+#radio1:checked ~ * .navbar-container {
+  background: rgb(65, 52, 129);
+}
+
+#radio1:not(:checked) ~ * .slide-1 {
+  background: black;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+#radio3:checked ~ * .slides .slide-3,
+#radio2:checked ~ * .slides .slide-2,
+#radio4:checked ~ * .slides .slide-4,
+#radio5:checked ~ * .slides .slide-5 {
+  animation: slides 0.6s ease-out forwards;
+}
+
+@keyframes slides {
+  50% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#radio3:not(:checked) ~ * .slides .slide-3,
+#radio2:not(:checked) ~ * .slides .slide-2,
+#radio4:not(:checked) ~ * .slides .slide-4,
+#radio5:not(:checked) ~ * .slides .slide-5 {
+  animation: slides-out 0.2s ease-out forwards;
+}
+
+@keyframes slides-out {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+#radio3:checked ~ * .text,
+#radio2:checked ~ * .text,
+#radio4:checked ~ * .text,
+#radio5:checked ~ * .text {
+  animation: text-bounce 0.8s ease-out forwards;
+}
+
+@keyframes text-bounce {
+  0% {
+    transform: translateX(290%);
+  }
+
+  75% {
+    transform: translateX(-40%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#radio3:not(:checked) ~ * .text-3,
+#radio2:not(:checked) ~ * .text-2,
+#radio4:not(:checked) ~ * .text-4,
+#radio5:not(:checked) ~ * .text-5 {
+  transform: translateX(290%);
+  animation: text-unbounce 0.2s ease-out forwards;
+}
+
+@keyframes text-unbounce {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(290%);
+  }
+}
