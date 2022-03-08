@@ -7,4 +7,4 @@
 * This program requires python3.+ installed.
 
 ## Setup/Installation
-To user the appliction, first make sure you have installed the required
+To use the appliction, first make sure you have installed the required modules from above as well as have python 3.+ 
