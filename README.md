@@ -14,3 +14,5 @@ Clone this repository using
 https://github.com/Hawa-Evakali/Justnews.git, or downloading a ZIP file of the code.
 * ## Step 2: 
 The repository, if downloaded as a .zip file will need to be extracted to your preferred location and opened
+* ## Step 3:
+ Open the terminal, go to the project directory and run the following commands: chmod +x manage.py and ./start.sh respectively to launch the program.
